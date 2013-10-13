@@ -384,10 +384,10 @@
 					isMoving = false;
 				}, 700);
 			});
-			
-			
+
+
 			var anchorLink  = element.attr('data-anchor');
-			
+
 			//flag to avoid callingn `scrollPage()` twice in case of using anchor links
 			lastScrolledDestiny = anchorLink;
 
@@ -413,6 +413,15 @@
 			}
 		}
 
+        function updateLocationHashWithPushstate(element) {
+            if(history.pushState) {
+                if(typeof element.data('anchor') !== 'undefined'){
+                    history.pushState(null, null, '#' + element.data('anchor'));
+                }else{
+                    history.pushState(null, null, '');
+                }
+            }
+        }
 
         function goToSlide(anchor) {
             var currentSlide = $('.slide.active'),
@@ -531,6 +540,7 @@
 
 			destiny.addClass('active');
             activateMenuElement(destiny.attr('data-anchor'));
+            updateLocationHashWithPushstate(destiny);
 		});
 
 		if (!isTablet) {
