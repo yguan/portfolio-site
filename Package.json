@@ -1,0 +1,12 @@
+{
+    "name" :         "portfoili-site",
+    "description":   "Yong Guan's portfolio site",
+    "keywords":      ["portfolio"],
+    "version":       "0.1.0",
+    "author":        "Yong Guan <gyong9@gmail.com>",
+    "licenses":      [{"type": "MIT", "url": "http://opensource.org/licenses/MIT"}],
+    "repository":    {"type": "git", "url": "https://github.com/yguan/portfolio-site.git"},
+    "dependencies": {
+        "grunt-contrib-requirejs": "~0.4.1"
+    }
+}
