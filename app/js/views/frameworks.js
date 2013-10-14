@@ -7,15 +7,17 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
         maxHeight = 500,
         maxXCount = 8,
         maxYCount = 18,
-        xBound = 220,
-        yBound = 50,
-        x = xBound,
-        y = 10,
+        xLeftBound = 220,
+        xRightBound = 20,
+        xBound = xLeftBound + xRightBound,
+        yTopBound = 60,
+        yBottomBound = 50,
+        yBound = yTopBound + yBottomBound,
         xAdjustRatio = 50 / 66,
         getSize = function (xCount, yCount) {
             return {
-                width: xCount / maxXCount * (maxWidth - xBound) * xAdjustRatio + xBound,
-                height: yCount / maxYCount * (maxHeight - yBound - y) + yBound + y
+                width: xCount / maxXCount * (maxWidth - xBound ) * xAdjustRatio + xBound,
+                height: yCount / maxYCount * (maxHeight - yBound) + yBound
             }
         },
         createChart = function (container, data, size) {
@@ -23,10 +25,10 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
                 container: container,
                 width: size.width,
                 height: size.height,
-                xBound: xBound,
-                yBound: yBound,
-                x: x,
-                y: y,
+                xLeftBound: xLeftBound,
+                xRightBound: xRightBound,
+                yTopBound: yTopBound,
+                yBottomBound: yBottomBound,
                 data: data
             });
         },

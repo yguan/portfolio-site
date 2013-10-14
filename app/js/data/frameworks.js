@@ -77,18 +77,22 @@ define(function (require, exports, module) {
     function turnEachYearIntoField(data) {
         var frameworksCopy,
             newFrameworkEntry,
-            years;
+            years,
+            duration;
         _.each(data, function (frameworks, key) {
             frameworksCopy = [];
             _.each(frameworks, function (framework) {
                 years = framework.years;
+                duration = framework.duration;
                 delete framework['years'];
+                delete framework['duration'];
 
                 _.each(years, function (year) {
                     newFrameworkEntry = _.clone(framework);
                     newFrameworkEntry.year = year;
                     frameworksCopy.push(newFrameworkEntry);
                 });
+                newFrameworkEntry.duration = duration;
             });
             data[key] = frameworksCopy;
 
