@@ -1,16 +1,21 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-	grunt.initConfig({
+    grunt.initConfig({
         requirejs: {
             compile: {
                 options: {
-                    baseUrl: 'app',
-                    mainConfigFile: "app/app.build.js",
-                    dir: 'app-built'
+//                    baseUrl: 'app',
+//                    optimizeAllPluginResources: true,
+//                    inlineText: true,
+                    appDir: 'app',
+                    mainConfigFile: "app/js/app.js",
+                    dir: 'app-built',
+                    name: 'app'
                 }
             }
         }
-    });
+    })
+    ;
 
     grunt.loadNpmTasks('grunt-contrib-requirejs');
 //    grunt.loadNpmTasks('grunt-connect');
@@ -19,4 +24,5 @@ module.exports = function(grunt) {
 //	grunt.registerTask('startTestServer', 'connect:tests');
 //	grunt.registerTask('startSeleniumServer', 'bgShell:startSeleniumServer');
 //	grunt.registerTask('runTests', 'bgShell:runTests');
-};
+}
+;
