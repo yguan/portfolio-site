@@ -35,11 +35,13 @@ require(
                 maxYCount = 18,
                 xBound = 220,
                 yBound = 50,
+                x = xBound,
+                y = 10,
                 xAdjustRatio = 50 / 66,
                 getSize = function (xCount, yCount) {
                     return {
                         width: xCount / maxXCount * (maxWidth - xBound) * xAdjustRatio + xBound,
-                        height: yCount / maxYCount * (maxHeight - yBound) + yBound
+                        height: yCount / maxYCount * (maxHeight - yBound - y) + yBound + y
                     }
                 },
                 size;
@@ -49,6 +51,8 @@ require(
                 height: maxHeight,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.ms
             });
 
@@ -59,6 +63,8 @@ require(
                 height: size.height,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.frontEnd
             });
 
@@ -69,6 +75,8 @@ require(
                 height: size.height,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.test
             });
 
@@ -79,6 +87,8 @@ require(
                 height: size.height,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.sourceControl
             });
 
@@ -89,6 +99,8 @@ require(
                 height: size.height,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.ci
             });
 
@@ -99,6 +111,8 @@ require(
                 height: size.height,
                 xBound: xBound,
                 yBound: yBound,
+                x: x,
+                y: y,
                 data: data.ide
             });
         });
