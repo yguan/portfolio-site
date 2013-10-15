@@ -3,14 +3,14 @@
 
 require(['chart/framework-history', 'data/frameworks'], function (chart, frameworks) {
     var frameworksdata = frameworks.getData(),
-        maxWidth = 900,
+        maxWidth = 910,
         maxHeight = 500,
         maxXCount = 8,
         maxYCount = 18,
         xLeftBound = 220,
-        xRightBound = 20,
+        xRightBound = 30,
         xBound = xLeftBound + xRightBound,
-        yTopBound = 60,
+        yTopBound = 45,
         yBottomBound = 50,
         yBound = yTopBound + yBottomBound,
         xAdjustRatio = 50 / 66,
@@ -34,7 +34,14 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
         },
         size;
 
-    createChart('#frameworks', frameworksdata.ms, {width: maxWidth, height: maxHeight});
+    size = getSize(10, 10);
+    createChart('#dotNet', frameworksdata.dotNet, size);
+
+    size = getSize(7, 6);
+    createChart('#dotNetBased', frameworksdata.dotNetBased, size);
+
+    size = getSize(9, 4);
+    createChart('#database', frameworksdata.database, size);
 
     size = getSize(4, 6);
     createChart('#front-end', frameworksdata.frontEnd, size);
