@@ -8,6 +8,9 @@ h4 {
     margin: 0 0 10px 0;
 }
 
+#viewport {
+    overflow: hidden;
+}
 #menu li {
     display: inline-block;
     margin: 10px 2px;
@@ -139,9 +142,10 @@ h4 {
 }
 
 .campus {
-    width: 320px;
+    width: 300px;
     height: 180px;
     display: inline-block;
+    float: left;
 }
 
 .uwb {
@@ -157,7 +161,8 @@ h4 {
 }
 
 .school .description {
-    float: left;
+    display: inline-block;
+    padding-left: 50px;
     width: 400px;
 }
 
@@ -182,11 +187,17 @@ h4 {
     float: left;
 }
 
-.thumbnail:hover,
-.github:hover {
+.thumbnail {
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.thumbnail:hover,
+.github:hover {
+    -moz-box-shadow: 0 0 20px rgba(0, 128, 0, 1);
+    -webkit-box-shadow: 0 0 20px rgba(0, 128, 0, 1);
+    box-shadow: 0 0 20px rgba(0, 128, 0, 1);
 }
 
 .github {
