@@ -23,11 +23,15 @@ define(function (require, exports, module) {
             yBound = config.yTopBound + config.yBottomBound,
             xBound = config.xLeftBound + config.xRightBound,
             yearsSeries,
-            durationSeries;
+            durationSeries,
+            orderAxis;
 
         chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound)
         xAxisYear = chart.addCategoryAxis('x', ['year']);
         yAxisName = chart.addCategoryAxis('y', 'name');
+        orderAxis = chart.addMeasureAxis('x', 'order');
+        orderAxis.hidden = true;
+        yAxisName.addOrderRule('number of years');
         xAxisDuration = chart.addMeasureAxis('x', 'number of years');
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
         yearsSeries.barGap = 0.2;
