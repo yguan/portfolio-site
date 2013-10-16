@@ -99,7 +99,7 @@ define(function (require, exports, module) {
                     newFrameworkEntry.year = year;
                     frameworksCopy.push(newFrameworkEntry);
                 });
-                newFrameworkEntry.duration = duration;
+                newFrameworkEntry['number of years'] = duration;
             });
             data[key] = frameworksCopy;
 

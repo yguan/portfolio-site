@@ -18,12 +18,12 @@ require(
             adjustSlideHeight = function () {
                 $('.content').css('height', $window.height() - 150);
             },
-            colors = ['orange', 'yellowgreen', 'black', '#3879d9', '#df6229', '#e9672b', '#d9d1be', '#16a085', '#444444'],
+            colors = ['orange', 'yellowgreen', 'black', '#3879d9', '#df6229', '#e9672b', '#16a085', '#444444', '#a74d0f', '#007a85'],
             setBodyBackgroundColor = function () {
                 var randomIndex = Math.floor(Math.random() * 10 + 1) % colors.length;
                 $('body').css('background-color', colors[randomIndex])
             };
-
+        // '#d9d1be'
         $container.find('[data-anchor=summary]').append(summaryTpl);
         $container.find('[data-anchor=projects]').append(projectsTpl);
         $container.find('[data-anchor=skills]').append(skillsTpl);

@@ -8,6 +8,11 @@ h4 {
     margin: 0 0 10px 0;
 }
 
+.attentionText {
+    font-weight: bold;
+    color: orange;
+}
+
 #viewport {
     overflow: hidden;
 }
@@ -135,9 +140,9 @@ h4 {
 }
 
 .round-corner {
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);

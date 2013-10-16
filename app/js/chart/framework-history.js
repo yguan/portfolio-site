@@ -4,6 +4,16 @@
 define(function (require, exports, module) {
     'use strict';
 
+    function getDefaultColors() {
+        var colors = ['#aebd22', '#99c0db', '#28b3f8', '#c999ca', '#ff7f0e', '#fef102', '#ef018b', '#8dc73f', '#0065a5'],
+            dimpleColors = [];
+        _.each(colors, function (color) {
+            dimpleColors.push(new dimple.color(color));
+        });
+
+        return dimpleColors;
+    }
+
     function create(config, data) {
         var svg = dimple.newSvg(config.container, config.width, config.height),
             chart = new dimple.chart(svg, config.data),
@@ -18,35 +28,26 @@ define(function (require, exports, module) {
         chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound)
         xAxisYear = chart.addCategoryAxis('x', ['year']);
         yAxisName = chart.addCategoryAxis('y', 'name');
-        xAxisDuration = chart.addMeasureAxis('x', 'duration');
-
-//        yAxisName.addGroupOrderRule('year');
-
-//        chart.assignColor('Used in year', 'orange', 'orange', 1);
-//        chart.assignColor('Used number of years', '#9500bc', '#9500bc', 1);
+        xAxisDuration = chart.addMeasureAxis('x', 'number of years');
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
         yearsSeries.barGap = 0.2;
-        durationSeries = chart.addSeries('name', dimple.plot.bubble, [xAxisDuration, yAxisName]);
+        durationSeries = chart.addSeries(' ', dimple.plot.bubble, [xAxisDuration, yAxisName]);
         durationSeries.lineWeight = 5;
-//        chart.addLegend(config.xLeftBound, 0, 290, 15, "left");
-        //#c2e487,#99c0db,#fdc381,#fff08b,#c999ca
-        chart.defaultColors = [
-            new dimple.color("#727047"),
-            new dimple.color("#aebd22"),
-            new dimple.color("#00457e"),
-            new dimple.color("#fe6847"),
-            new dimple.color("#c2e487"),
-            new dimple.color("#99c0db"),
-            new dimple.color("#fdc381"),
-            new dimple.color("#28b3f8"),
-            new dimple.color("#c999ca")
-        ];
+        chart.assignColor(' ', 'red', 0.9);
+        chart.defaultColors = getDefaultColors();
+        //hart.addLegend(config.xLeftBound, 0, 290, 15, "left");
         chart.draw();
     }
-
 
     exports.create = function (config) {
         create(config);
     };
 });
 
+/*
+ var colors = ['#727047'];
+ var $body = $('body');
+ _.each(colors, function (color) {
+ $body.append('<div>').css('background-color', color).width(50).height(50);
+ });
+ */
