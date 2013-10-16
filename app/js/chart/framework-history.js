@@ -23,14 +23,11 @@ define(function (require, exports, module) {
             yBound = config.yTopBound + config.yBottomBound,
             xBound = config.xLeftBound + config.xRightBound,
             yearsSeries,
-            durationSeries,
-            orderAxis;
+            durationSeries;
 
         chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound)
         xAxisYear = chart.addCategoryAxis('x', ['year']);
         yAxisName = chart.addCategoryAxis('y', 'name');
-        orderAxis = chart.addMeasureAxis('x', 'order');
-        orderAxis.hidden = true;
         yAxisName.addOrderRule('number of years');
         xAxisDuration = chart.addMeasureAxis('x', 'number of years');
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
@@ -49,9 +46,8 @@ define(function (require, exports, module) {
 });
 
 /*
- var colors = ['#727047'];
- var $body = $('body');
- _.each(colors, function (color) {
- $body.append('<div>').css('background-color', color).width(50).height(50);
+ var colors = ['orange', 'yellowgreen', 'black', '#3879d9', '#df6229', '#e9672b', '#16a085', '#444444', '#a74d0f', '#007a85'];var $body = $('body');
+ $.each(colors, function (index,color) {
+ $('<div></div>').width(50).height(50).css('backgroundColor', color).appendTo($body);
  });
  */

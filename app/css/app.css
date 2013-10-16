@@ -2,13 +2,14 @@ body {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
     color: #868c92;
+    background-color: #90c984;
 }
 
 h4 {
     margin: 0 0 10px 0;
 }
 
-.attentionText {
+.attention-text {
     font-weight: bold;
     color: orange;
 }
@@ -16,6 +17,7 @@ h4 {
 #viewport {
     overflow: hidden;
 }
+
 #menu li {
     display: inline-block;
     margin: 10px 2px;
@@ -120,9 +122,11 @@ h4 {
     -moz-border-radius: 20px;
     border: solid 1px gray;
 }
+
 .chart-section circle {
     opacity: 1.0;;
 }
+
 .chart-section text {
     font-size: 11px !important;
 }
@@ -183,14 +187,19 @@ h4 {
 }
 
 .portrait {
+    margin: 0 auto;
     width: 150px;
     height: 150px;
     background: url("../img/portrait.jpg") no-repeat;
-    float: right;
 }
 
 .left-of-portrait {
     width: 80%;
+    float: left;
+}
+
+.portrait-column {
+    width: 170px;
     float: left;
 }
 
@@ -228,4 +237,26 @@ h4 {
 
 .hidden {
     display: none;
+}
+
+.circle-block {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -border-radius: 50%;
+}
+
+.click-me {
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: solid 2px #5c5c5c;
+    font-size: 14px;
+    /*margin: 0 auto;*/
+    /*background-color: #3879d9;*/
+    /*color: #ffffff;*/
+}
+.click-me:hover {
+    background-color: #6eb7bd;
 }

@@ -83,12 +83,10 @@ define(function (require, exports, module) {
         var frameworksCopy,
             newFrameworkEntry,
             years,
-            duration,
-            order;
+            duration;
 
         _.each(data, function (frameworks, key) {
             frameworksCopy = [];
-            order = 0;
 
             _.each(frameworks, function (framework) {
                 years = framework.years;
@@ -101,16 +99,13 @@ define(function (require, exports, module) {
                 _.each(years, function (year) {
                     newFrameworkEntry = _.clone(framework);
                     newFrameworkEntry.year = year;
-                    newFrameworkEntry.order = order;
                     frameworksCopy.push(newFrameworkEntry);
                 });
                 newFrameworkEntry['number of years'] = duration;
-                order = order + 20;
             });
             data[key] = frameworksCopy;
 
         });
-
     }
 
     turnEachYearIntoField(data);
