@@ -26,7 +26,7 @@ define(function (require, exports, module) {
             ],
             dotNet: [
                 { name: '.NET 4.5', years: [2013], duration: 0.9, level: level.proficient },
-                { name: '.NET 4.0', years: [2010, 2011], duration: 1.5, level: level.proficient },
+                { name: '.NET 4.0', years: [2011, 2012], duration: 1.5, level: level.proficient },
                 { name: '.NET 3.5', years: [2010, 2011], duration: 0.6, level: level.proficient },
                 { name: '.NET 3.0', years: [2008, 2009, 2010], duration: 1, level: level.proficient },
                 { name: '.NET 2.0', years: [2006, 2007, 2008], duration: 2, level: level.proficient },
@@ -39,7 +39,7 @@ define(function (require, exports, module) {
                 { name: 'ServiceStack', years: [2012, 2013], duration: 0.5, level: level.someExperience },
                 { name: 'NHibernate', years: [2010, 2011], duration: 0.5, level: level.someExperience },
                 { name: 'Telerik Reporting', years: [2011], duration: 0.2, level: level.someExperience },
-                { name: 'ComponentArt (ASP.NET AJAX 2009)', years: [2009, 2011], duration: 1.5, level: level.someExperience },
+                { name: 'ComponentArt (ASP.NET AJAX 2009)', years: [2009, 2010,2011], duration: 1.5, level: level.someExperience },
                 { name: 'Infragistics (Windows Forms 2008)', years: [2008], duration: 0.5, level: level.someExperience },
                 { name: 'ASP', years: [2006, 2010], duration: 1, level: level.someExperience }
             ],
@@ -81,7 +81,7 @@ define(function (require, exports, module) {
                 { name: 'CruiseControl.NET', years: [2009, 2010], duration: 0.2, level: level.someExperience }
             ],
             ide: [
-                { name: 'Resharper (7, 6, 5, 4, 3)', years: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 7.5, level: level.someExperience },
+                { name: 'Resharper (7, 6, 5, 4, 3)', years: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 8, level: level.someExperience },
                 { name: 'Visual Studio.NET 2012', years: [2012, 2013], duration: 1, level: level.proficient },
                 { name: 'Visual Studio.NET 2010', years: [2010, 2011, 2012], duration: 2.5, level: level.proficient },
                 { name: 'Visual Studio.NET 2008', years: [2009, 2010], duration: 1.5, level: level.proficient },
