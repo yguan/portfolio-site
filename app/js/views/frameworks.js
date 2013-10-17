@@ -3,11 +3,11 @@
 
 require(['chart/framework-history', 'data/frameworks'], function (chart, frameworks) {
     var frameworksdata = frameworks.getData(),
-        maxWidth = 910,
+        maxWidth = 930,
         maxHeight = 500,
         maxXCount = 8,
         maxYCount = 18,
-        xLeftBound = 220,
+        xLeftBound = 240,
         xRightBound = 30,
         xBound = xLeftBound + xRightBound,
         yTopBound = 45,

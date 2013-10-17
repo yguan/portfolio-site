@@ -28,8 +28,10 @@ define(function (require, exports, module) {
         chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound)
         xAxisYear = chart.addCategoryAxis('x', ['year']);
         yAxisName = chart.addCategoryAxis('y', 'name');
+        yAxisName.showGridlines = true;
         yAxisName.addOrderRule('number of years');
         xAxisDuration = chart.addMeasureAxis('x', 'number of years');
+        xAxisDuration.showGridlines = false;
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
         yearsSeries.barGap = 0.2;
         durationSeries = chart.addSeries(' ', dimple.plot.bubble, [xAxisDuration, yAxisName]);
