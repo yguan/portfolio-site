@@ -20,7 +20,8 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
                 height: yCount / maxYCount * (maxHeight - yBound) + yBound
             }
         },
-        createChart = function (container, data, size) {
+        createChart = function (container, framework) {
+            var size = getSize(framework.years.length, framework.names.length);
             chart.create({
                 container: container,
                 width: size.width,
@@ -29,32 +30,22 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
                 xRightBound: xRightBound,
                 yTopBound: yTopBound,
                 yBottomBound: yBottomBound,
-                data: data
+                data: framework.data
             });
         },
-        size;
+        chartConfigs = [
+            {container: '#languages', framework: frameworksdata.languages },
+            {container: '#dotNet', framework: frameworksdata.dotNet },
+            {container: '#dotNetBased', framework: frameworksdata.dotNetBased },
+            {container: '#database', framework: frameworksdata.database },
+            {container: '#frontEnd', framework: frameworksdata.frontEnd },
+            {container: '#test', framework: frameworksdata.test },
+            {container: '#sourceControl', framework: frameworksdata.sourceControl },
+            {container: '#ci', framework: frameworksdata.ci },
+            {container: '#ide', framework: frameworksdata.ide }
+        ];
 
-    size = getSize(10, 10);
-    createChart('#dotNet', frameworksdata.dotNet, size);
-
-    size = getSize(7, 6);
-    createChart('#dotNetBased', frameworksdata.dotNetBased, size);
-
-    size = getSize(9, 4);
-    createChart('#database', frameworksdata.database, size);
-
-    size = getSize(4, 6);
-    createChart('#front-end', frameworksdata.frontEnd, size);
-
-    size = getSize(6, 9);
-    createChart('#test', frameworksdata.test, size);
-
-    size = getSize(7, 5);
-    createChart('#source-control', frameworksdata.sourceControl, size);
-
-    size = getSize(4, 2);
-    createChart('#ci', frameworksdata.ci, size);
-
-    size = getSize(9, 7);
-    createChart('#ide', frameworksdata.ide, size);
+    _.each(chartConfigs, function (chartConfig) {
+        createChart(chartConfig.container, chartConfig.framework);
+    });
 });

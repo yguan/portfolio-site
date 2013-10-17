@@ -11,7 +11,19 @@ define(function (require, exports, module) {
             someExperience: 'Some Experience',
             noExperience: 'No Experience'
         },
+        chartData,
         data = {
+            languages: [
+                { name: 'HTML', years: [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 10, level: level.veryProficient },
+                { name: 'CSS', years: [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 10, level: level.proficient },
+                { name: 'JavaScript', years: [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 10, level: level.veryProficient },
+                { name: 'C#', years: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 8, level: level.veryProficient },
+                { name: 'Transact-SQL', years: [2007, 2008, 2009, 2010, 2011, 2012, 2013], duration: 7, level: level.proficient },
+                { name: 'Python', years: [2012, 2013], duration: 0.7, level: level.someExperience },
+                { name: 'VB.NET', years: [2006, 2008], duration: 1.5, level: level.someExperience },
+                { name: 'C++', years: [2004, 2005, 2006], duration: 2.5, level: level.proficient },
+                { name: 'Java', years: [2004, 2005, 2006], duration: 2, level: level.proficient }
+            ],
             dotNet: [
                 { name: '.NET 4.5', years: [2013], duration: 0.9, level: level.proficient },
                 { name: '.NET 4.0', years: [2010, 2011], duration: 1.5, level: level.proficient },
@@ -83,13 +95,20 @@ define(function (require, exports, module) {
         var frameworksCopy,
             newFrameworkEntry,
             years,
-            duration;
+            allYears,
+            allNames,
+            duration,
+            newData = {};
 
         _.each(data, function (frameworks, key) {
             frameworksCopy = [];
+            allYears = [];
+            allNames = [];
 
             _.each(frameworks, function (framework) {
                 years = framework.years;
+                allYears = allYears.concat(years);
+                allNames.push(framework.name);
                 duration = framework.duration;
                 delete framework['years'];
                 delete framework['duration'];
@@ -103,15 +122,19 @@ define(function (require, exports, module) {
                 });
                 newFrameworkEntry['number of years'] = duration;
             });
-            data[key] = frameworksCopy;
-
+            newData[key] = {
+                data: frameworksCopy,
+                years: _.uniq(allYears),
+                names: _.uniq(allNames)
+            };
         });
+        return newData;
     }
 
-    turnEachYearIntoField(data);
-    console.log(data);
+    chartData = turnEachYearIntoField(data);
+
     exports.getData = function () {
-        return data;
+        return chartData;
     };
 });
 

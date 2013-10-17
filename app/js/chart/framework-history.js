@@ -5,7 +5,7 @@ define(function (require, exports, module) {
     'use strict';
 
     function getDefaultColors() {
-        var colors = ['#aebd22', '#99c0db', '#28b3f8', '#c999ca', '#ff7f0e', '#fef102', '#ef018b', '#8dc73f', '#0065a5'],
+        var colors = ['#aebd22', '#99c0db', '#28b3f8', '#c999ca', '#ff7f0e', '#fef102', '#ef018b', '#0065a5', 'green'],// '#8dc73f'
             dimpleColors = [];
         _.each(colors, function (color) {
             dimpleColors.push(new dimple.color(color));

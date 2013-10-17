@@ -6,6 +6,10 @@
         A bar represents the year of using the framework.
     </div>
     <div class="chart-section">
+        <h4>Programming Languages</h4>
+        <div id="languages"></div>
+    </div>
+    <div class="chart-section">
         <h4>.NET Frameworks</h4>
         <div id="dotNet"></div>
     </div>
@@ -19,7 +23,7 @@
     </div>
     <div class="chart-section">
         <h4>Fron-end Stacks</h4>
-        <div id="front-end"></div>
+        <div id="frontEnd"></div>
     </div>
     <div class="chart-section">
         <h4>Test Frameworks</h4>
@@ -27,7 +31,7 @@
     </div>
     <div class="chart-section">
         <h4>Source Control Systems</h4>
-        <div id="source-control"></div>
+        <div id="sourceControl"></div>
     </div>
     <div class="chart-section">
         <h4>Continuous Integration Systems</h4>
