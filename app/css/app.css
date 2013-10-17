@@ -105,21 +105,29 @@ h4 {
 }
 
 .content .project {
-    margin-bottom: 30px;
+    padding-left: 40px;
+    width: 700px;
+}
+.project .thumbnail {
+    margin: 5px 0 0 10px;
 }
 
 .school {
     clear: both;
 }
 
-.chart-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    width: 900px;
+.round-content {
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
+    border: solid 1px gray;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.chart-section {
+    width: 900px;
     border: solid 1px gray;
 }
 
@@ -147,9 +155,6 @@ h4 {
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
 .campus {
@@ -157,6 +162,9 @@ h4 {
     height: 180px;
     display: inline-block;
     float: left;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
 .uwb {
