@@ -25,21 +25,28 @@ define(function (require, exports, module) {
             yearsSeries,
             durationSeries;
 
-        chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound)
+        chart.setBounds(config.xLeftBound, config.yTopBound, config.width - xBound, config.height - yBound);
+
         xAxisYear = chart.addCategoryAxis('x', ['year']);
+
         yAxisName = chart.addCategoryAxis('y', 'name');
         yAxisName.showGridlines = true;
         yAxisName.addOrderRule('number of years');
+
         xAxisDuration = chart.addMeasureAxis('x', 'number of years');
         xAxisDuration.showGridlines = false;
+
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
         yearsSeries.barGap = 0.2;
         durationSeries = chart.addSeries(' ', dimple.plot.bubble, [xAxisDuration, yAxisName]);
         durationSeries.lineWeight = 5;
         chart.assignColor(' ', 'red', 0.9);
         chart.defaultColors = getDefaultColors();
-        //hart.addLegend(config.xLeftBound, 0, 290, 15, "left");
+        //chart.addLegend(config.xLeftBound, 0, 290, 15, 'left');
         chart.draw();
+
+        xAxisDuration.shapes.style('opacity', 0.5);
+        xAxisDuration.titleShape.style('opacity', 0.5);
     }
 
     exports.create = function (config) {
