@@ -39,7 +39,7 @@ define(function (require, exports, module) {
                 { name: 'ServiceStack', years: [2012, 2013], duration: 0.5, level: level.someExperience },
                 { name: 'NHibernate', years: [2010, 2011], duration: 0.5, level: level.someExperience },
                 { name: 'Telerik Reporting', years: [2011], duration: 0.2, level: level.someExperience },
-                { name: 'ComponentArt (ASP.NET AJAX 2009)', years: [2009, 2010,2011], duration: 1.5, level: level.someExperience },
+                { name: 'ComponentArt (ASP.NET AJAX 2009)', years: [2009, 2010, 2011], duration: 1.5, level: level.someExperience },
                 { name: 'Infragistics (Windows Forms 2008)', years: [2008], duration: 0.5, level: level.someExperience },
                 { name: 'ASP', years: [2006, 2010], duration: 1, level: level.someExperience }
             ],
@@ -77,6 +77,7 @@ define(function (require, exports, module) {
                 { name: 'TortoiseCVS', years: [2006, 2007, 2008, 2009], duration: 3, level: level.proficient }
             ],
             ci: [
+                { name: 'TFS', years: [ 2013], duration: 0.9, level: level.someExperience },
                 { name: 'Team City', years: [2011, 2012], duration: 1.5, level: level.someExperience },
                 { name: 'CruiseControl.NET', years: [2009, 2010], duration: 0.2, level: level.someExperience }
             ],
