@@ -25,10 +25,8 @@ require([
 ], function () {
     'use strict';
 
-    require([
-        'views/all-views'
-    ], function (views) {
-//        samples.run();
+    require(['views/all-views'], function (views) {
+        views.render();
     });
 });
 

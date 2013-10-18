@@ -1,7 +1,7 @@
 /*jslint nomen: true*/
 /*global $,define,require,_ */
 
-require(['chart/framework-history', 'data/frameworks'], function (chart, frameworks) {
+define(['exports', 'chart/framework-history', 'data/frameworks'], function (exports, chart, frameworks) {
     var frameworksdata = frameworks.getData(),
         maxWidth = 930,
         maxHeight = 500,
@@ -45,7 +45,9 @@ require(['chart/framework-history', 'data/frameworks'], function (chart, framewo
             {container: '#ide', framework: frameworksdata.ide }
         ];
 
-    _.each(chartConfigs, function (chartConfig) {
-        createChart(chartConfig.container, chartConfig.framework);
-    });
+    exports.render = function () {
+        _.each(chartConfigs, function (chartConfig) {
+            createChart(chartConfig.container, chartConfig.framework);
+        });
+    };
 });
