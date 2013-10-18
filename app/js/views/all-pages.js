@@ -10,9 +10,10 @@ define(
         'lib/text!template/skills.tpl',
         'lib/text!template/experience.tpl',
         'lib/text!template/education.tpl',
-        'views/frameworks'
+        'views/frameworks',
+        'views/reading-list'
     ],
-    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks) {
+    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks, readingList) {
         'use strict';
 
         exports.render = function (container) {
@@ -26,6 +27,7 @@ define(
             $(container).append($container);
 
             frameworks.render();
+            readingList.render($container.find('[data-anchor=readingList]'));
         };
     }
 );
