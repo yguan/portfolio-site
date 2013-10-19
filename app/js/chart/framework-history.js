@@ -34,6 +34,7 @@ define(function (require, exports, module) {
         yAxisName.addOrderRule('number of years');
 
         xAxisDuration = chart.addMeasureAxis('x', 'number of years');
+        xAxisDuration.tickFormat = '.1f';
         xAxisDuration.showGridlines = false;
 
         yearsSeries = chart.addSeries('name', dimple.plot.bar, [xAxisYear, yAxisName]);
