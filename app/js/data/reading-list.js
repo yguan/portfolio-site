@@ -1,4 +1,4 @@
-define(function (require, exports, module) {
+define(function (require, exports) {
     'use strict';
 
     var data = {
@@ -32,6 +32,23 @@ define(function (require, exports, module) {
                 {
                     thumbnail: 'antipatterns.jpg',
                     link: 'http://www.amazon.com/Antipatterns-Managing-Software-Organizations-Engineering/dp/1439861862/'
+                }
+            ]
+        },
+        visualDesign: {
+            name: 'Visual Design',
+            books: [
+                {
+                    thumbnail: 'design-with-the-mind-in-mind.jpg',
+                    link: 'http://www.amazon.com/Designing-Mind-Simple-Understanding-Interface/dp/012375030X'
+                },
+                {
+                    thumbnail: 'visual-thinking-for-design.jpg',
+                    link: 'http://www.amazon.com/Visual-Thinking-Kaufmann-Interactive-Technologies/dp/0123708966'
+                },
+                {
+                    thumbnail: 'seductive-interaction-design.jpg',
+                    link: 'http://www.amazon.com/Seductive-Interaction-Design-Effective-Experiences/dp/0321725522'
                 }
             ]
         }
