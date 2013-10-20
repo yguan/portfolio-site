@@ -401,7 +401,7 @@
 		
 		function scrollToAnchor(){
 			//getting the anchor link in the URL and deleting the `#`
-			var value =  window.location.hash.replace('#', '');
+			var value =  window.location.hash.replace('#!', '').replace('#', '');
 						
 			if(value){  //if theres any #
 			
