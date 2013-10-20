@@ -96,12 +96,17 @@ h4 {
     margin: 0;
 }
 
-.content .dim {
-    opacity: 0.5;
+.job .dim {
+    opacity: 0.7;
+    width: 145px;
+    display: inline-block;
 }
 
 .content.summary {
     font-size: 20px;
+}
+.content .job {
+    margin-bottom: 20px;
 }
 
 .content .project {
@@ -223,7 +228,8 @@ h4 {
     float: left;
 }
 
-.thumbnail {
+.thumbnail,
+.content .cv {
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
@@ -279,4 +285,81 @@ h4 {
 }
 .click-me:hover {
     background-color: #6eb7bd;
+}
+
+.content .cv {
+    margin: 0 auto;
+    width: 816px;
+    height: 1056px;
+}
+.cv .header {
+    width: 100%;
+}
+.cv .header .name {
+    font-size: 35px;
+    padding-right: 45px;
+    display: inline-block;
+}
+.cv .header .contact {
+    display: inline-block;
+}
+.cv .sites {
+    padding-bottom: 20px;
+}
+.cv .site {
+    line-height: 30px;
+    display: inline-block;
+    width: 406px;
+}
+.cv .spacer {
+    display: inline-block;
+    width: 30px;
+}
+.sites .portfolio {
+    background-color: #6e6e6e;
+    color: #ffffff;
+    float: left;
+}
+.sites .projects {
+    background-color: #d2d2d2;
+    color: #000000;
+    float: right;
+}
+.cv .block {
+    padding: 20px 30px 20px 30px;
+}
+.cv .objective {
+    clear: both;
+}
+.cv .main {
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    clear: both;
+    display: inline-block;
+}
+.cv .education,
+.cv .learning-interests {
+    padding-top: 10px;
+}
+
+.main h2 {
+    margin-top: 0;
+}
+.main .left {
+    width: 349px;
+    padding-right: 30px;
+}
+.main .right {
+    border-left: solid 1px lightgray;
+    width: 346px;
+    padding-left: 30px;
+}
+
+.left {
+    display: inline-block;
+    float: left;
+}
+.right {
+    display: inline-block;
+    float: right;
 }

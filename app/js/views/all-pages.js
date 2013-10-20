@@ -11,9 +11,10 @@ define(
         'lib/text!template/experience.tpl',
         'lib/text!template/education.tpl',
         'views/frameworks',
-        'views/reading-list'
+        'views/reading-list',
+        'lib/text!template/cv.tpl'
     ],
-    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks, readingList) {
+    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks, readingList, cvTpl) {
         'use strict';
 
         exports.render = function (container) {
@@ -24,6 +25,7 @@ define(
             $container.find('[data-anchor=skills]').append(skillsTpl);
             $container.find('[data-anchor=experience]').append(experienceTpl);
             $container.find('[data-anchor=education]').append(educationTpl);
+            $container.find('[data-anchor=cv]').append(cvTpl);
             $(container).append($container);
 
             frameworks.render();
