@@ -27,7 +27,10 @@ module.exports = function (grunt) {
         },
         watch: {
             files: "app/less/*",
-            tasks: ["less"]
+            tasks: ["less"],
+            options: {
+                debounceDelay: 2000
+            }
         },
         requirejs: {
             dist: {
