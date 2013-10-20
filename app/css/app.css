@@ -107,7 +107,8 @@ h4 {
     font-size: 20px;
 }
 .content .job {
-    margin-bottom: 20px;
+    margin: 20px 30px 40px 30px;
+    padding: 20px;
 }
 
 .content .project {
@@ -230,7 +231,8 @@ h4 {
 }
 
 .thumbnail,
-.cv {
+.cv,
+.job {
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
