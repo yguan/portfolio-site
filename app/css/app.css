@@ -3,6 +3,7 @@ body {
     font-size: 14px;
     color: #868c92;
     background-color: #90c984;
+    -webkit-print-color-adjust: exact;
 }
 
 h4 {
@@ -229,7 +230,7 @@ h4 {
 }
 
 .thumbnail,
-.content .cv {
+.cv {
     -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
@@ -268,7 +269,7 @@ h4 {
 .circle-block {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    -border-radius: 50%;
+    border-radius: 50%;
 }
 
 .click-me {
@@ -287,12 +288,43 @@ h4 {
     background-color: #6eb7bd;
 }
 
-.content .cv {
+.cv-buttons {
+    float: right;
+    display: inline-block;
+}
+.cv-buttons .button {
+    line-height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    border: solid 2px gray;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: gray;
+}
+.cv-buttons .button:hover {
+    background-color: gray;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.cv-container {
     margin: 0 auto;
-    width: 816px;
-    height: 1056px;
+    width: 850px;
+}
+.cv {
+    margin: 0;
+    padding: 0;
+    width: 850px;
+    height: 1100px;
+    background-color: whitesmoke;
+    text-align: left;
+    font-size: 16px;
+    color: #000000;
+    line-height: 140%;
+    display: inline-block;
 }
 .cv .header {
+    padding-top: 30px !important;
     width: 100%;
 }
 .cv .header .name {
@@ -309,7 +341,7 @@ h4 {
 .cv .site {
     line-height: 30px;
     display: inline-block;
-    width: 406px;
+    width: 423px;
 }
 .cv .spacer {
     display: inline-block;
@@ -346,12 +378,12 @@ h4 {
     margin-top: 0;
 }
 .main .left {
-    width: 349px;
+    width: 363px;
     padding-right: 30px;
 }
 .main .right {
     border-left: solid 1px lightgray;
-    width: 346px;
+    width: 366px;
     padding-left: 30px;
 }
 
@@ -362,4 +394,35 @@ h4 {
 .right {
     display: inline-block;
     float: right;
+}
+
+@media print {
+    body > *:not(.active .content) {
+        display: none;
+    }
+    .cv {
+        background-color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .cv {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+    }
+
+@page {
+    padding: 0;
+    margin: 0;
+    width: 8.5in;
+    height: 11in;
 }

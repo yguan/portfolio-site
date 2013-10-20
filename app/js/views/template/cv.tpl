@@ -1,4 +1,9 @@
 <div class="content">
+    <div class="cv-buttons">
+        <div class="button cv-print">Print Me</div>
+        <a href="files/Yong-Guan-CV.pdf"><div class="button">Download PDF</div></a>
+    </div>
+    <div class="cv-container">
     <div class="cv">
         <div class="header block">
             <span class="name">Yong Guan</span>
@@ -90,5 +95,6 @@
 
         </div>
 
+    </div>
     </div>
 </div>

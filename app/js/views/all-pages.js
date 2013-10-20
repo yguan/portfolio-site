@@ -30,6 +30,10 @@ define(
 
             frameworks.render();
             readingList.render($container.find('[data-anchor=readingList]'));
+
+            $('.cv-print').click(function () {
+                $(".content .cv").print();
+            });
         };
     }
 );
