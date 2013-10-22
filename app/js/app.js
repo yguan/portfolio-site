@@ -32,3 +32,14 @@ require([
 });
 
 // python -m http.server
+// tree /A > tree.txt
+
+//index.html->app-min.css: use for styles
+//index.html->require.js: use for dependency management
+//index.html->app.js: use for views creations
+
+//app.js->required third-party libraries: load
+//app.js->all-view.js: load
+//all-view.js->all-pages.js: load
+//all-pages.js->all tpl files and data-driven views: load
+

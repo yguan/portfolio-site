@@ -2,17 +2,17 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         less: {
-            development: {
-                files: [
-                    {
-                        expand: true,     // Enable dynamic expansion.
-                        cwd: 'app/less',  // Src matches are relative to this path.
-                        src: ['*.less'],  // Actual pattern(s) to match.
-                        dest: 'app/css',  // Destination path prefix.
-                        ext: '.css'       // Dest filepaths will have this extension.
-                    }
-                ]
-            },
+//            development: {
+//                files: [
+//                    {
+//                        expand: true,     // Enable dynamic expansion.
+//                        cwd: 'app/less',  // Src matches are relative to this path.
+//                        src: ['*.less'],  // Actual pattern(s) to match.
+//                        dest: 'app/css',  // Destination path prefix.
+//                        ext: '.css'       // Dest filepaths will have this extension.
+//                    }
+//                ]
+//            },
             production: {
                 options: {
                     paths: ["app/css"],
