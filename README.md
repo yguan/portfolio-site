@@ -20,11 +20,11 @@ This repository contains the source code of my [portfolio site](http://yguan.git
 
 #### Top Level File Dependencies
 
-<object data="doc-img/app-dependency-top-level.svg" type="image/svg+xml"></object>
+![](http://yguan.github.io/doc-img/app-dependency-top-level.svg)
 
 #### JavaScript Files Loading Sequence
 
-<object data="doc-img/js-loading-sequence.svg" type="image/svg+xml"></object>
+![](http://yguan.github.io/doc-img/js-loading-sequence.svg)
 
 #### Thing to Remove in index.html
 
