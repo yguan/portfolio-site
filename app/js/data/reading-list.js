@@ -51,6 +51,19 @@ define(function (require, exports) {
                     link: 'http://www.amazon.com/Seductive-Interaction-Design-Effective-Experiences/dp/0321725522'
                 }
             ]
+        },
+        complexity: {
+            name: 'Complexity Science',
+            books: [
+                {
+                    thumbnail: 'complexity-a-guided-tour.jpg',
+                    link: 'http://www.amazon.com/Complexity-Guided-Tour-Melanie-Mitchell/dp/0199798109'
+                },
+                {
+                    thumbnail: 'complexity-organizations-and-change.jpg',
+                    link: 'http://www.amazon.com/Complexity-Organizations-Change-Introduction-Management/dp/041539502X'
+                }
+            ]
         }
     };
 

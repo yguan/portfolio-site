@@ -12,9 +12,10 @@ define(
         'lib/text!template/education.tpl',
         'views/frameworks',
         'views/reading-list',
-        'lib/text!template/cv.tpl'
+        'lib/text!template/cv.tpl',
+        'views/expandable'
     ],
-    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks, readingList, cvTpl) {
+    function (exports, homeTpl, summaryTpl, projectsTpl, skillsTpl, experienceTpl, educationTpl, frameworks, readingList, cvTpl, expandable) {
         'use strict';
 
         exports.render = function (container) {
@@ -34,6 +35,8 @@ define(
             $('.cv-print').click(function () {
                 $(".content .cv").print();
             });
+
+            expandable.init();
         };
     }
 );

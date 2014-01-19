@@ -33,7 +33,7 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
                 setBodyBackgroundColor();
                 adjustSlideHeight();
                 $window.resize(adjustSlideHeight);
-                $('.click-me').hover(setBodyBackgroundColor, setBodyBackgroundColor);
+                $('.click-me').hover(setBodyBackgroundColor, $.noop);
             });
         };
     }
