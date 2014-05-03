@@ -8,12 +8,12 @@
     <li data-menuanchor="cv"><a href="#cv">CV</a></li>
 </ul>
 
-<div class="section">
-    <div class="slide active" data-anchor="summary"></div>
-    <div class="slide" data-anchor="projects"></div>
-    <div class="slide" data-anchor="skills"></div>
-    <div class="slide" data-anchor="experience"></div>
-    <div class="slide" data-anchor="education"></div>
-    <div class="slide" data-anchor="readingList"></div>
-    <div class="slide" data-anchor="cv"></div>
+<div id="stages">
+    <div class="stage" id="summary"></div>
+    <div class="stage" id="projects"></div>
+    <div class="stage" id="skills"></div>
+    <div class="stage" id="experience"></div>
+    <div class="stage" id="education"></div>
+    <div class="stage" id="readingList"></div>
+    <div class="stage" id="cv"></div>
 </div>
