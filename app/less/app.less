@@ -24,6 +24,14 @@
   color: #000000;
 }
 
+.gray-text {
+  color: darkslategray
+}
+
+.gray-border {
+  border: solid 1px darkslategray;
+}
+
 .default-font-size {
   font-size: 16px;
 }
@@ -86,18 +94,19 @@ h4 {
 
 #menu {
   position: fixed;
-  top: 0;
-  right: 50px;
-  height: 40px;
+  top: 20px;
+  left: 5px;
   z-index: 70;
   padding: 0;
   margin: 0;
+  width: 115px;
 
   li {
     .inline-block;
-    margin: 10px 2px;
+    .gray-border;
+    margin: 3px 0;
+    width: 110px;
     background: transparent;
-    border: solid 1px white;
 
     &.active {
       background-color: #666;
@@ -108,19 +117,15 @@ h4 {
         .menu-li-a-common-style;
 
         &:hover {
-          .black-text;
+          .gray-text;
         }
       }
     }
 
     a {
       text-decoration: none;
-      .white-text;
+      .gray-text;
       .menu-li-a-common-style;
-
-      &:hover {
-        color: darkslategray;
-      }
     }
 
     &:hover {
@@ -149,7 +154,7 @@ h4 {
   .black-text;
   .default-font-size;
   .default-line-height;
-  padding: 60px 20px 20px 20px;
+  padding: 20px 20px 20px 150px;
 
   a {
     text-decoration: none;
@@ -175,7 +180,6 @@ h4 {
   }
 
   .description {
-    margin-left: 30px;
     padding-bottom: 10px;
   }
 
@@ -184,7 +188,7 @@ h4 {
   .book-category,
   .chart-section,
   .school {
-    margin: 15px 30px 40px 30px;
+    margin: 15px 30px 40px 0;
     padding: 20px;
     .box-shadow();
   }
@@ -255,7 +259,7 @@ h4 {
 
   .description {
     .inline-block;
-    padding-left: 50px;
+    padding-left: 10px;
     width: 400px;
   }
 }
@@ -268,7 +272,6 @@ h4 {
 .summary {
   .default-line-height;
   font-size: 18px;
-  margin: 15px 30px;
 }
 
 .portrait {
@@ -322,21 +325,11 @@ h4 {
 .click-me {
   color: gray;
   margin: 0 auto;
-  cursor: pointer;
   height: 70px;
   width: 70px;
   line-height: 70px;
-  text-align: center;
   border: solid 2px lightgray;
-  font-size: 14px;
   .rounded-corners(50%);
-  /*margin: 0 auto;*/
-  /*background-color: #3879d9;*/
-  /*color: #ffffff;*/
-
-  &:hover {
-    background-color: rgba(154, 205, 50, 0.5);
-  }
 }
 
 .float-right {
@@ -350,16 +343,18 @@ h4 {
 }
 
 .cv-buttons {
-  .float-right;
+  padding-bottom: 15px;
 
   .button {
+    .inline-block;
+    width: 100px;
     line-height: 30px;
     padding: 0 10px;
     text-align: center;
-    border: solid 2px gray;
     cursor: pointer;
-    margin-bottom: 10px;
-    color: gray;
+    margin: 0 10px 0 0;
+    .gray-text;
+    .gray-border;
 
     &:hover {
       background-color: gray;
@@ -367,11 +362,6 @@ h4 {
       font-weight: normal;
     }
   }
-}
-
-.cv-container {
-  margin: 0 auto;
-  width: 850px;
 }
 
 .cv {

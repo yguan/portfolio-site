@@ -18,7 +18,7 @@
         <div class="portrait-column">
             <div class="circular portrait"></div>
             <div class="connector"></div>
-            <div class="circle-block click-me">Hover Me</div>
+            <div class="circle-block click-me">&nbsp;&nbsp;&nbsp;&nbsp;</div>
         </div>
     </div>
 </div>

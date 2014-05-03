@@ -1,7 +1,7 @@
 <div class="content">
     <div class="cv-buttons">
-        <div class="button cv-print">Print Me</div>
-        <a href="files/Yong-Guan-CV.pdf"><div class="button">Download PDF</div></a>
+        <span class="button cv-print">Print Me</span>
+        <a href="files/Yong-Guan-CV.pdf"><span class="button">Download PDF</span></a>
     </div>
     <div class="cv-container">
     <div class="cv">
