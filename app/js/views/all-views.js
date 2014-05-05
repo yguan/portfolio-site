@@ -38,6 +38,9 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
                 $divToScroll;
 
             $menuLis.on('click', function (evt) {
+                if ($menuLis.hasClass('no-action')) {
+                    return;
+                }
                 $menuLis.removeClass('active');
                 $anchor = $(evt.target);
                 $anchor.parent('li').addClass('active');
