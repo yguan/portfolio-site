@@ -35,15 +35,19 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
         function setMenuClickHandler() {
             var $menuLis = getMenuLis(),
                 $anchor,
+                $activeLi,
                 $divToScroll;
 
             $menuLis.on('click', function (evt) {
-                if ($menuLis.hasClass('no-action')) {
+                $anchor = $(evt.target);
+                $activeLi = $anchor.parent('li');
+
+                if ($activeLi.hasClass('no-action')) {
                     return;
                 }
-                $menuLis.removeClass('active');
-                $anchor = $(evt.target);
-                $anchor.parent('li').addClass('active');
+                
+                $menuLis.removeClass('active');                
+                $activeLi.addClass('active');
                 $divToScroll = $(getPageSelector($anchor.attr('href')));
                 $divToScroll.scrollTop(0);
                 $divToScroll.scrollLeft(0);
