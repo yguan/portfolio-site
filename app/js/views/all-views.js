@@ -1,7 +1,7 @@
 /*jslint nomen: true*/
 /*global $,define,require,_ */
 
-define(['exports', 'views/all-pages'], function (exports, allPages) {
+define(['exports', 'views/all-pages', 'lib/zenscroll'], function (exports, allPages, zenscroll) {
         'use strict';
 
         var pageIdPrefix = 'page_';
@@ -21,7 +21,7 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
         }
 
         function setInitialActiveMenuItem() {
-            var $activeMenuAnchor = $('#menu a[href=' + window.location.hash + ']'),
+            var $activeMenuAnchor = $('#menu a[href=" + window.location.hash + "]'),
                 $activeMenuLi = $activeMenuAnchor.length > 0 ? $activeMenuAnchor.parent('li') : getMenuLis().first();
             if ($activeMenuLi) {
                 $activeMenuLi.addClass('active');
@@ -48,9 +48,13 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
                 
                 $menuLis.removeClass('active');                
                 $activeLi.addClass('active');
-                $divToScroll = $(getPageSelector($anchor.attr('href')));
-                $divToScroll.scrollTop(0);
-                $divToScroll.scrollLeft(0);
+                $divToScroll = $($anchor.attr('href'));
+                $('.stage').removeClass('not-visible');
+                zenscroll.intoView($divToScroll.get(0));
+                setTimeout(function () {
+                    $divToScroll.prev().addClass('not-visible');
+                }, 500);
+                
             });
         }
 
@@ -58,14 +62,6 @@ define(['exports', 'views/all-pages'], function (exports, allPages) {
             allPages.render('#viewport');
             setMenuClickHandler();
             setInitialActiveMenuItem();
-
-            $('#stages').fullContent({
-                children: '.stage',
-                mapPosition: getMapPosition(7),
-                stageStart: 1,
-                idComplement: pageIdPrefix,
-                speedTransition: 750
-            });
         };
     }
 );

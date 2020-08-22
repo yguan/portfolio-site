@@ -14,9 +14,7 @@ require.config({
 
 require([
     'lib/text',
-    'lib/jquery-1.9.1',
-    'lib/jquery.scrollTo',
-    'lib/jquery.fullContent',
+    'lib/jquery-1.12.4',
     'lib/jquery.print',
     'lib/d3',
     'lib/dimple.v1.1.1.min',
