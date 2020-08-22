@@ -1,3 +1,8 @@
+body,
+.smooth-container {
+   scroll-behavior: smooth;
+}
+
 .rounded-corners (@radius: 10px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -175,7 +180,7 @@ h4 {
   .gray-text;
   .default-font-size;
   .default-line-height;
-  padding: 30px 0 20px 150px;
+  padding: 20px 0 20px 150px;
 
   a {
     text-decoration: none;
@@ -513,5 +518,10 @@ h4 {
 }
 
 .stage {
-  overflow-y: auto;
+  overflow-y: auto !important;
+  height: 100vh;
+}
+
+.not-visible {
+  visibility: hidden;
 }
